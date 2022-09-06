@@ -1311,7 +1311,7 @@ else
 endif
 
 # TODO: some of these may be conditional
-dep_zlib = dependency('zlib', version : '>= 1.2.3', fallback : ['zlib', 'zlib_dep'])
+dep_zlib = dependency('zlib', version : '>= 1.2.3', method: 'system', fallback : ['zlib', 'zlib_dep'])
 pre_args += '-DHAVE_ZLIB'
 
 _zstd = get_option('zstd')
